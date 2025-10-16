@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Margarine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+/* === REGLAS GENERALES === */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f3f0ed;
+  font-family: 'Inter', sans-serif;
+  color: #1c1c1c;
+  text-align: center;
+}
+
+/* === HERO (solo para Inicio) === */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* === TEXTOS GENERALES === */
+.title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin: 10px 0;
+  color: #000000;
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 3.2rem;
+  margin: 0;
+  color: #000000; /* por defecto negro */
+}
+
+.intro {
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #000000;
+}
+
+/* === TÍTULOS Y SUBTÍTULOS POR PÁGINA === */
+
+/* INICIO → fondo oscuro, texto blanco, fuente Playfair Display */
+.hero .title,
+.hero .subtitle {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* MILESTONES y TO BE CONTINUED → fondo claro, texto negro, fuente Margarine */
+.milestones-bg .title,
+.milestones-bg .subtitle,
+.continued-bg .title,
+.continued-bg .subtitle {
+  font-family: 'Margarine', cursive;
+  font-weight: 400;
+  color: #000000;
+}
+
+/* === NAV === */
+nav {
+  margin-top: 40px;
+}
+
+nav a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 15px;
+  padding: 8px 18px;
+  border: 1.5px solid #fff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background: #fff;
+  color: #111;
+}
+
+/* === BASE PARA PÁGINAS CON FONDO === */
+.page-background {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-attachment: fixed;
+}
+
+/* === FONDOS POR PÁGINA === */
+.about-bg {
+  background-image: url('fondoaboutu.png');
+}
+
+.milestones-bg {
+  background-image: url('fondomilestones.jpg');
+}
+
+.continued-bg {
+  background-image: url('fondo-continued.jpg');
+}
+
+/* === CONTENIDO ENCIMA DEL FONDO (GENERAL) === */
+.content {
+  margin-top: 60px;
+  padding: 20px;
+  color: #fff; /* texto blanco por defecto */
+  max-width: 800px;
+  text-align: center;
+}
+
+/* --- EXCEPCIÓN SOLO PARA ABOUT --- */
+.about-bg .content,
+body.about-bg .content {
+  color: #000; /* texto negro solo en About */
+}
+
+/* --- NAV SOLO PARA ABOUT --- */
+.about-bg nav a,
+body.about-bg nav a {
+  color: #000;
+  border-color: rgba(0,0,0,0.6);
+}
+
+.about-bg nav a:hover,
+body.about-bg nav a:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* --- EXCEPCIÓN SOLO PARA MILESTONES --- */
+.milestones-bg .content,
+body.milestones-bg .content {
+  color: #000;
+}
+
+.milestones-bg nav a,
+body.milestones-bg nav a {
+  color: #000;
+  border-color: rgba(0,0,0,0.6);
+}
+
+.milestones-bg nav a:hover,
+body.milestones-bg nav a:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* --- EXCEPCIÓN SOLO PARA TO BE CONTINUED --- */
+.continued-bg .content,
+body.continued-bg .content {
+  color: #000;
+}
+
+.continued-bg nav a,
+body.continued-bg nav a {
+  color: #000;
+  border-color: rgba(0,0,0,0.6);
+}
+
+.continued-bg nav a:hover,
+body.continued-bg nav a:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* === GALERÍA === */
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgb(255, 255, 255);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}

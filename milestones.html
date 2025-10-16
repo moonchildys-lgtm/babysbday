@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Milestones</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Reglas específicas solo para esta página */
+    body.page-background.milestones-bg {
+      background-image: url('fondo2milestones.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #000;
+    }
+
+    .milestones-bg .content,
+    body.milestones-bg .content {
+      color: #000; /* texto negro */
+    }
+
+    .milestones-bg nav a,
+    body.milestones-bg nav a {
+      color: #000;
+      border-color: rgba(0,0,0,0.6);
+    }
+
+    .milestones-bg nav a:hover,
+    body.milestones-bg nav a:hover {
+      background: #000;
+      color: #fff;
+    }
+
+    /* Estilo para el contenedor del video */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* relación 16:9 */
+      height: 0;
+      overflow: hidden;
+      max-width: 800px;
+      width: 100%;
+      margin: 40px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body class="page-background milestones-bg">
+  
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="about.html">About You</a>
+    <a href="milestones.html">Milestones</a>
+  </nav>
+
+  <div class="content">
+    <h1 class="title">Milestones</h1>
+    <p class="intro">
+      Me he dedicado a grabarte en momentos importantes o bonitos durante un año para hacer esat mini compilación!! Espero que sepas que adoptar al gohan comprarte tu primer coche o hacer tus primeras salidas del país no son una tontería.
+      <br>
+      Los que te rodeamos estamos muy felices de verte cumplir tus metas y cada objetivo que conquistas es un pequeño porcentaje de lo que la vida te tiene preparado. 
+      <br>
+      <br>
+    </p>
+
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/zA1N03EYTWE"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <p class="intro">
+    Espero que te guste y perdona por la calidad jope. Ojalá haber podido tener el After Effects y haber hecho algo en condiciones... 
+    <br>
+    Pero creo que con que estés tú el vídeo ya vale la pena. 
+  
+    </p>
+</body>
+</html>
